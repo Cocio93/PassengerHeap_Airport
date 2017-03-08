@@ -20,7 +20,7 @@ public class PassengerConsumer {
       processingTicksLeft--;
       return;
       }
-    else {
+    if(passenger != null) {
       Time now = clock.getTime();
       if (passenger.getPlane().getDepartureTime().compareTo(now) < 0) {
         passenger.setStatus(Status.MissedPlane);
